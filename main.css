@@ -1,0 +1,60 @@
+
+body * {
+  box-sizing: border-box;
+}
+
+code {
+  display: inline-block;
+  color: firebrick;
+}
+
+main {
+  font-size: 18px;
+  max-width: 675px;
+  margin: auto;
+}
+
+/* key-like styles used by 
+https://meta.stackexchange.com */
+main kbd {
+  display: inline-block;
+  margin: 0 .1em;
+  padding: .1em .6em;
+  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #242729;
+  text-shadow: 0 1px 0 #FFF;
+  background-color: #e1e3e5;
+  border: 1px solid #adb3b9;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(12,13,14,0.2), 0 0 0 2px #FFF inset;
+  white-space: nowrap;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.btn {
+  padding: 5px 15px;
+}
+
+.btn--border-firebrick {
+  border: 1px solid firebrick;
+}
+
+.btn--bg-white {
+  background-color: white;
+}
+
+ /* Typically, you'd want to restore focus on all affected elements.
+ We're limiting the fix to this class so you can see the difference.
+ 
+ This pattern courtesy of the a11y style guide:
+ http://a11y-style-guide.com/style-guide/section-general.html#kssref-general-link-focus
+ */
+.btn--outline-fix:focus {
+  outline: auto 2px Highlight;
+  outline: auto 5px -webkit-focus-ring-color;
+}

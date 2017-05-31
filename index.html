@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Firefox Focus Bug Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <main>
+      <p>In Firefox, changing the <code>background</code> <b>or</b> <code>border</code> properties on focusable elements results in the complete loss of their default <code>focus</code> outline. To see this bug (and our fix) in action, open this repl.it in both Firefox and Chrome and use <kbd>Tab</kbd> and <kbd>Shift</kbd> + <kbd>Tab</kbd> to navigate the buttons below.</p>
+      <p>Control with no alterations to <code>border</code> or <code>background</code>:</p>
+      <button class="btn">Test</button>
+      <p>Example with button <code>border</code> altered:</p>
+      <button class="btn btn--border-firebrick">Test</button>
+      <p>Example with <code>background</code> altered:</p>
+      <button class="btn btn--bg-white">Test</button>
+      <p>Example of an altered button with manually restored <code>outlune</code> styles:</p>
+      <button class="btn btn--bg-white btn--border-firebrick   btn--outline-fix">Test</button>
+      <p>If you're curious, you can read more about this issue, although it isn't well-documented. It's been <a href="https://github.com/necolas/normalize.css/issues/481" target="_blank" rel="noopener noreferrer">reported on GitHub</a> and <a href="https://codepen.io/anon/pen/yeEZpK" target="blank" rel="noopener noreferrer">tested on codepen</a>, but it is not limited to websites that use Normalice.css, as previously believed.</p>
+    </main>
+  </body>
+</html>
